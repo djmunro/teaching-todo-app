@@ -29,7 +29,9 @@ function makeTodoListItem() {
 
   // creates deleteButton element
   const deleteButton = document.createElement("button");
-  deleteButton.onclick = deleteTodo(todo);
+  deleteButton.onclick = function() {
+    deleteTodo(todo);
+  };
   deleteButton.className = "delete-todo";
   deleteButton.innerText = "X";
 
@@ -41,12 +43,8 @@ function makeTodoListItem() {
   return todo;
 }
 
-function deleteTodo() {
-  // create a function to delete the list item
-  /*
-    <li class="todo-item">
-      <span>Bar</span>
-      <button class="delete-todo">X</button>
-    </li>
-  */
+function deleteTodo(todo) {
+  // remove todo from todo-list
+  const todoList = document.querySelector(".todo-list");
+  todoList.removeChild(todo);
 }
