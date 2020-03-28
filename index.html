@@ -36,6 +36,23 @@
         background: tomato;
         color: white;
       }
+      .todo-list {
+        padding: 0;
+      }
+      .todo-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        list-style: none;
+      }
+      .delete-todo {
+        padding: 5px;
+        border-color: tomato;
+        border-radius: 3px;
+        background: tomato;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -50,7 +67,20 @@
 
       <section>
         <h3>ToDo's</h3>
-        <ul class="todo-list"></ul>
+        <ul class="todo-list">
+          <li class="todo-item">
+            <span>Foo</span>
+            <button class="delete-todo">X</button>
+          </li>
+          <li class="todo-item">
+            <span>Bar</span>
+            <button class="delete-todo">X</button>
+          </li>
+          <li class="todo-item">
+            <span>Baz</span>
+            <button class="delete-todo">X</button>
+          </li>
+        </ul>
       </section>
     </div>
   </body>
