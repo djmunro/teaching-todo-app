@@ -8,10 +8,9 @@ const addBtn = document.querySelector(".add-todo-btn");
 addBtn.onclick = addTodo;
 
 function addTodo() {
-  console.log("foo bar baz bah bing boo");
-
   // take the todo-input value and create a new <li> element
   const todo = makeTodoListItem();
+  console.log(todo);
 
   // append the new list item to our todo list
   const todoList = document.querySelector(".todo-list");
